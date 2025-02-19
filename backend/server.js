@@ -3,6 +3,7 @@ const express = require('express')
 
 // express app 
 const app = express()
+const workoutRoutes = require('./routes/workouts')
 
 // middleware
 app.use((req, res, next) => {
@@ -11,9 +12,8 @@ app.use((req, res, next) => {
 })
 
 // routes
-app.get('/', (req, res) => {
-    res.json({ msg:'Welcome to the app'} )
-})
+app.use('/api/workouts', workoutRoutes)
+
 
 // listen for requests
 app.listen(process.env.PORT, () => {
