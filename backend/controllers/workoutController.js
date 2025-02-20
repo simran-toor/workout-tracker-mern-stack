@@ -38,7 +38,6 @@ const createWorkout = async (req, res) => {
     }
 }
 
-
 // delete a workout
 const deleteWorkout = async (req, res) => {
     const { id } = req.params
@@ -55,7 +54,6 @@ const deleteWorkout = async (req, res) => {
 
     res.status(200).json(workout)
 }
-
 
 // update a workout
 const updateWorkout = async (req, res) => {
@@ -75,8 +73,6 @@ const updateWorkout = async (req, res) => {
 
     res.status(200).json(workout)
 }
-
-
 
 module.exports = {
     getWorkouts,
